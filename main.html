@@ -16,7 +16,7 @@
               
                     <img class="w-14" src="assets/Group.png" alt="">
                 <div>
-                    <h1 class="text-2xl font-bold">$ 4500</h1>
+                    <h1 class="text-2xl font-bold">$ <span id="balance">4500</span></h1>
                 
                     <p class="border border-black rounded mt-3 px-2 py-1">available balance</p>
                 </div>
@@ -28,34 +28,35 @@
             <h1 class="text-2xl font-bold mb-2 ml-4">Welcome to payoo</h1>
             <p class="ml-4">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
             <div class="cards grid grid-cols-3 mt-12">
-                <div class="box border rounded-2xl border-slate-400 p-4 m-4 text-center">
+                <div id="add-money-box" class="box border rounded-2xl border-slate-400 p-4 m-2 text-center">
                     <img class="w-8 mx-auto" src="assets/wallet1.png" alt="">
                     <h3>Add Money</h3>
                 </div>
-                <div class="box border rounded-2xl border-slate-400 p-4 m-4 text-center">
+                <div id="cash-out-box" class="box border rounded-2xl border-slate-400 p-4 m-2 text-center">
                     <img class="w-8 mx-auto" src="assets/send1.png" alt="">
                     <h3>Cash out</h3>
                 </div>
-                <div class="box border rounded-2xl border-slate-400 p-4 m-4 text-center">
+                <div class="box border rounded-2xl border-slate-400 p-4 m-2 text-center">
                     <img class="w-8 mx-auto" src="assets/money1.png" alt="">
                     <h3>Transfer</h3>
                 </div>
-                <div class="box border rounded-2xl border-slate-400 p-4 m-4 text-center">
+                <div class="box border rounded-2xl border-slate-400 p-4 m-2 text-center">
                     <img class="w-8 mx-auto" src="assets/transaction1.png" alt="">
                     <h3>Transection</h3>
                 </div>
-                <div class="box border rounded-2xl border-slate-400 p-4 m-4 text-center">
+                <div class="box border rounded-2xl border-slate-400 p-4 m-2 text-center">
                     <img class="w-8 mx-auto" src="assets/purse1.png" alt="">
                     <h3>PAy bill</h3>
                 </div>
-                <div class="box border rounded-2xl border-slate-400 p-4 m-4 text-center">
+                <div class="box border rounded-2xl border-slate-400 p-4 m-2 text-center">
                     <img class="w-8 mx-auto" src="assets/transaction1.png" alt="">
                     <h3>Transection</h3>
                 </div>      
             </div>
         </section>
-
-        <section class="mt-4">
+    <!-- add money section -->
+        <section id="addmoney"  class="mt-4">
+            
             <h2 class="ml-6 font-bold">Add Money</h2>
             <div class="hero bg-gray-200   ">
                 <div class="hero-content flex-col rounded-sm lg:flex-row-reverse w-11/12">
@@ -92,7 +93,7 @@
                         </label>
                       </div>
                       <div class="form-control mt-1">
-                        <button id="login-btn" class="btn btn-primary">Add money</button>
+                        <button id="add-money" class="btn btn-primary">Add money</button>
                       </div>
                     </form>
                   </div>
@@ -100,10 +101,51 @@
               </div>
         </section>
 
-
+            <!--  cash out section -->
+        <section id="cashout" class="mt-4">
+            
+            <h2 class="ml-6 font-bold">cash out</h2>
+            <div class="hero bg-gray-200   ">
+                <div class="hero-content flex-col rounded-sm lg:flex-row-reverse w-11/12">
+                  
+                  <div class="card bg-gray-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                       
+                      <div class="form-control">
+                        <label class="label">
+                            
+                          <span class="label-text text-black font-bold"> Agent number</span>
+                        </label>
+                        <input type="number" id="account-number" class="bg-white h-10 rounded-3xl input " placeholder="Account number" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text text-black font-bold"> Add amount</span>
+                        </label>
+                        <input type="number" id="cashout-amount" class="bg-white h-10 rounded-3xl input " placeholder="Amount number" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text text-black font-bold">PIN Number</span>
+                        </label>
+                        <input type="text" id="cashout-pin" class="bg-white h-10 rounded-3xl input input-bordered"  placeholder="4-Digit pin" required />
+                        <label class="label">
+                          
+                        </label>
+                      </div>
+                      <div class="form-control mt-1">
+                        <button id="cashout-btn" class="btn btn-primary">Withdraw money</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+        </section>
 
         </section>
 
-
+<script src="./script/addMoney.js"></script>
+<script src="./script/toggle.js"></script>
+<script src="./script/cashout.js"></script>
 </body>
 </html>
